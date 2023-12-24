@@ -5,8 +5,8 @@ const port = 3000;
 
 app.use(express.static("./public"));
 
-app.listen(port, console.log("im runnig on " + port));
+app.listen(port, console.log("this port is runnnig on" + port));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(process.cwd("./public/index.html")));
-});
+app.get('/',(req,res)=>{
+    res.send(path.join(process.cwd(),'./public/index.html'))
+})
